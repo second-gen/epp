@@ -126,7 +126,7 @@ class EppTest < Minitest::Test
 
         send = xml_file("test_request.xml")
 
-        @ssl_sock.expects(:write).with(@epp.packed(send).bytes + send.bytes).returns(121)
+        @ssl_sock.expects(:write).with(@epp.packed(send)+ send).returns(121)
 
         assert_equal 121, @epp.send_frame(send)
       end
@@ -149,7 +149,7 @@ class EppTest < Minitest::Test
         send = xml_file("test_request.xml")
         receive = xml_file("test_response.xml")
 
-        @ssl_sock.expects(:write).with(@epp.packed(send).bytes + send.bytes).returns(121)
+        @ssl_sock.expects(:write).with(@epp.packed(send) + send).returns(121)
         @ssl_sock.expects(:read).with(4).returns("\000\000\003\"")
         @ssl_sock.expects(:read).with(798).returns(receive)
 
