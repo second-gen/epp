@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<epp xmlns="urn:ietf:params:xml:ns:epp-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
+  <command>
+    <create>
+      <contact:create xmlns:contact="urn:ietf:params:xml:ns:contact-1.0" xsi:schemaLocation="urn:ietf:params:xml:ns:contact-1.0 contact-1.0.xsd">
+        <contact:id>LD-000000000000</contact:id>
+        <contact:postalInfo type="int">
+          <contact:name>Joy Malcolm Forrest</contact:name>
+          <contact:org>Ebby Halliburton, LEANDOG®</contact:org>
+          <contact:addr>
+            <contact:street>8900 Thacker #1199</contact:street>
+            <contact:city>Pleasentville</contact:city>
+            <contact:sp>TX</contact:sp>
+            <contact:pc>77004</contact:pc>
+            <contact:cc>US</contact:cc>
+          </contact:addr>
+        </contact:postalInfo>
+        <contact:voice>+1.2135555585</contact:voice>
+        <contact:fax>+1.4695671117</contact:fax>
+        <contact:email>jan@ebenezer.com</contact:email>
+        <contact:authInfo>
+          <contact:pw>NotOurPassword</contact:pw>
+        </contact:authInfo>
+      </contact:create>
+    </create>
+    <clTRID>leandog1111111111111</clTRID>
+  </command>
+</epp>

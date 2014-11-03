@@ -117,7 +117,7 @@ module Epp #:nodoc:
     # size of the frame sent to the server. If the socket returns EOF,
     # the connection has closed and a SocketError is raised.
     def send_frame(xml)
-      @socket.write(packed(xml) + xml)
+      @socket.write(packed(xml).bytes + xml.bytes)
     end
     
     # Pack the XML as a header for the EPP server.

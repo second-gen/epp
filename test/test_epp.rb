@@ -126,7 +126,7 @@ class EppTest < Minitest::Test
 
         send = xml_file("test_request.xml")
 
-        @ssl_sock.expects(:write).with(@epp.packed(send) + send).returns(121)
+        @ssl_sock.expects(:write).with(@epp.packed(send).bytes + send.bytes).returns(121)
 
         assert_equal 121, @epp.send_frame(send)
       end
@@ -149,7 +149,7 @@ class EppTest < Minitest::Test
         send = xml_file("test_request.xml")
         receive = xml_file("test_response.xml")
 
-        @ssl_sock.expects(:write).with(@epp.packed(send) + send).returns(121)
+        @ssl_sock.expects(:write).with(@epp.packed(send).bytes + send.bytes).returns(121)
         @ssl_sock.expects(:read).with(4).returns("\000\000\003\"")
         @ssl_sock.expects(:read).with(798).returns(receive)
 
@@ -171,6 +171,17 @@ class EppTest < Minitest::Test
         @response = @epp.request(test_request)
 
         assert_equal test_response, @response
+      end
+
+      should "write unicode without encoding errors" do
+        prepare_socket!
+
+        @epp.open_connection
+        unicode_message = xml_file("bad_contact_encode.xml")
+
+        @ssl_sock.expects(:write)
+
+        @epp.send_frame(unicode_message)
       end
     end
 
