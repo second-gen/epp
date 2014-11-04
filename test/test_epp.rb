@@ -178,8 +178,9 @@ class EppTest < Minitest::Test
 
         @epp.open_connection
         unicode_message = xml_file("bad_contact_encode.xml")
+        message_size = [1282].pack("N")
 
-        @ssl_sock.expects(:write)
+        @ssl_sock.expects(:write).with(includes(message_size))
 
         @epp.send_frame(unicode_message)
       end

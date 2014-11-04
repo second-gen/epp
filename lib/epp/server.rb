@@ -123,7 +123,7 @@ module Epp #:nodoc:
 
     # Pack the XML as a header for the EPP server.
     def packed(xml)
-      [xml.size + 4].pack("N")
+      [xml.bytes.size + 4].pack("N")
     end
 
     # Returns size of header of response from the EPP server.
