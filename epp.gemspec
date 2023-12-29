@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.authors = ["Josh Delsman"]
   s.date = %q{2010-07-14}
   s.description = %q{Basic functionality for connecting and making requests on EPP (Extensible Provisioning Protocol) servers}
-  s.email = %q{jdelsman@ultraspeed.com}
+  s.email = %q{developers@secondgen.com}
   s.extra_rdoc_files = [
     "LICENSE",
      "README.rdoc"
@@ -39,7 +39,7 @@ Gem::Specification.new do |s|
      "test/xml/test_request.xml",
      "test/xml/test_response.xml"
   ]
-  s.homepage = %q{http://github.com/ultraspeed/epp}
+  s.homepage = %q{http://github.com/secondgen/epp}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
@@ -58,17 +58,20 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<mocha>, [">= 0"])
       s.add_runtime_dependency(%q<hpricot>, [">= 0"])
       s.add_runtime_dependency(%q<libxml-ruby>, [">= 0"])
+      s.add_runtime_dependency(%q<uuidtools>, [">= 0"])
     else
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<mocha>, [">= 0"])
       s.add_dependency(%q<hpricot>, [">= 0"])
       s.add_dependency(%q<libxml-ruby>, [">= 0"])
+      s.add_dependency(%q<uuidtools>, [">= 0"])
     end
   else
     s.add_dependency(%q<shoulda>, [">= 0"])
     s.add_dependency(%q<mocha>, [">= 0"])
     s.add_dependency(%q<hpricot>, [">= 0"])
     s.add_dependency(%q<libxml-ruby>, [">= 0"])
+    s.add_dependency(%q<uuidtools>, [">= 0"])
   end
 end
 

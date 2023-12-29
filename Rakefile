@@ -8,8 +8,8 @@ begin
     gem.name = "epp"
     gem.summary = "EPP (Extensible Provisioning Protocol) for Ruby"
     gem.description = "Basic functionality for connecting and making requests on EPP (Extensible Provisioning Protocol) servers"
-    gem.email = "jdelsman@ultraspeed.com"
-    gem.homepage = "http://github.com/ultraspeed/epp"
+    gem.email = "developers@secondgen.com"
+    gem.homepage = "http://github.com/second-gen/epp"
     gem.authors = ["Josh Delsman"]
 
     # Dependencies
@@ -17,6 +17,7 @@ begin
     gem.add_development_dependency "mocha"
     gem.add_dependency "hpricot"
     gem.add_dependency "libxml-ruby"
+    gem.add_dependency "uuidtools"
   end
 rescue LoadError
   puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"
