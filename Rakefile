@@ -17,7 +17,6 @@ begin
     gem.add_development_dependency "mocha"
     gem.add_dependency "hpricot"
     gem.add_dependency "libxml-ruby"
-    gem.add_dependency "uuidtools"
   end
 rescue LoadError
   puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"

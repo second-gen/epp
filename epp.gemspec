@@ -58,20 +58,17 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<mocha>, [">= 0"])
       s.add_runtime_dependency(%q<hpricot>, [">= 0"])
       s.add_runtime_dependency(%q<libxml-ruby>, [">= 0"])
-      s.add_runtime_dependency(%q<uuidtools>, [">= 0"])
     else
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<mocha>, [">= 0"])
       s.add_dependency(%q<hpricot>, [">= 0"])
       s.add_dependency(%q<libxml-ruby>, [">= 0"])
-      s.add_dependency(%q<uuidtools>, [">= 0"])
     end
   else
     s.add_dependency(%q<shoulda>, [">= 0"])
     s.add_dependency(%q<mocha>, [">= 0"])
     s.add_dependency(%q<hpricot>, [">= 0"])
     s.add_dependency(%q<libxml-ruby>, [">= 0"])
-    s.add_dependency(%q<uuidtools>, [">= 0"])
   end
 end
 

@@ -74,7 +74,6 @@ GEM
     thread_safe (0.3.4)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uuidtools (2.1.5)
 
 PLATFORMS
   ruby
@@ -84,4 +83,3 @@ DEPENDENCIES
   jeweler
   mocha
   shoulda
-  uuidtools
